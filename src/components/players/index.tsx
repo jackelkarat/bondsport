@@ -15,7 +15,7 @@ function Players() {
 
   useEffect(() => {
     const url = "https://www.balldontlie.io/api/v1/players";
-    // Allows us to intercept an API request so we can cancel anytime - sending signal in fetch will destroy immediately
+    
     const controller = new AbortController();
     const { signal } = controller;
     const fetchData = async () => {
@@ -36,7 +36,6 @@ function Players() {
     };
     fetchData();
     return () => {
-      // cleanup the abort controller
       controller.abort();
     };
   }, []);
@@ -86,15 +85,12 @@ function Players() {
         containerClassName=""
         containerStyle={{}}
         toastOptions={{
-          // Define default options
           className: "",
           duration: 5000,
           style: {
             background: "#363636",
             color: "#fff",
           },
-
-          // Default options for specific types
           success: {
             duration: 3000,
             theme: {
