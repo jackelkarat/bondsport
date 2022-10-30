@@ -1,0 +1,253 @@
+/* APP */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(242, 245, 247);
+}
+
+code {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.App {
+  text-align: left;
+  border: 2px solid lightgray;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  color: rgb(251, 173, 18);
+  font-weight: 700;
+  font-size: 30px;
+  margin: 0px;
+}
+
+/* NAV */
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: 2px solid rgb(77, 77, 77);
+}
+.navbar h1 {
+  color: rgb(77, 77, 77);
+}
+
+
+/* LOADER */
+.loading {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid rgb(90, 89, 89);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  margin: 10px auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.description {
+  margin: 10px;
+  padding: 15px;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Card */
+.card {
+  color: rgb(77, 77, 77);
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+  background-color: white;
+  position: relative;
+}
+
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .card-title {
+    margin-top: 18px;
+    position: relative;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-title {
+    margin-top: 18px;
+    position: relative;
+    display: inline-block;
+  }
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.card li {
+  color: black;
+}
+
+
+.card button {
+  background: rgb(77, 77, 77);
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  width: 35px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: rgb(251, 173, 18);
+  cursor: pointer;
+}
+
+
+.flex-container {
+  display: flex;
+  background-color: #919599;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  width: 50%;
+  font-size: 30px;
+}
+
+.searchBlock {
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px 10px 0px;
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+
+input[type=text] {
+  padding: 6px;
+  margin-top: 0px;
+  font-size: 17px;
+  border: none;
+  border: 2px solid rgb(77, 77, 77);
+  height: 36px;
+}
+
+ .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #000;
+}
+
+.searchTerm:focus{
+  color: #000;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid rgb(77, 77, 77);
+  background: rgb(77, 77, 77);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.search {
+  width: 50%;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.box {
+  float: left;
+  height: 25px;
+  width: 25px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  border: 1px solid black;
+  clear: both;
+}
+
+.box-container{
+  display: flex;
+}
+
+.box-position{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.not-found{
+
+}
+
