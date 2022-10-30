@@ -142,9 +142,6 @@ function Players() {
           }
         </Card>
 
-
-
-
         <Card title="Favorite players" backgroundColor={colorSelected}>
           <div className="box-position">
             <div className="box-container" >
@@ -161,7 +158,7 @@ function Players() {
                 className="player"
               >
                 <li>{item.last_name + ' ' + item.first_name}</li>
-                <button  onClick={() => removeFlights(item)}>&#xe020;</button>
+                <button  onClick={() => removeFlights(item)}>-</button>
               </div>
             ))
           ) : (
