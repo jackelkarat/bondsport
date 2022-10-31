@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { PlayerType } from "../../types/player";
 import Card from "../Card";
 import toast, { Toaster } from "react-hot-toast";
+import Search from "../Search";
 
 
 function Players() {
@@ -13,9 +14,10 @@ function Players() {
   const [colors, setColors] = useState(["#418da7", "#e36503", "#ffff00", "#c3c3b8", "#ffc0cb", "#fff"]);
   const [colorSelected, setColorSelected] = useState('');
 
+
   useEffect(() => {
     const url = "https://www.balldontlie.io/api/v1/players";
-    
+
     const controller = new AbortController();
     const { signal } = controller;
     const fetchData = async () => {
@@ -91,6 +93,7 @@ function Players() {
             background: "#363636",
             color: "#fff",
           },
+
           success: {
             duration: 3000,
             theme: {
@@ -101,13 +104,9 @@ function Players() {
         }}
       />
 
+
   <div className="search">
-      <input
-          type="text"
-          className="searchTerm"
-          placeholder="Search player"
-          onChange={event => searchPlayer(event.target.value)}
-      />
+    <Search searchPlayerTerm={searchPlayer}/>
     <button type="submit" className="searchButton">
       &#128269;
     </button>
